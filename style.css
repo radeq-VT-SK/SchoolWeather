@@ -1,0 +1,23 @@
+body {
+    background-color: rgb(146, 228, 253);
+    font-family: 'Roboto', sans-serif; /* Modern style font - Roboto */
+}
+
+h1 {
+    font-weight: normal; /* Optionally adjust font weight if needed */
+}
+
+/* Center text on smaller screens */
+@media only screen and (max-width: 600px) {
+    body {
+        text-align: center;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    div[id^="field"] {
+        text-align: center;
+    }
+}
