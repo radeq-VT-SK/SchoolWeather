@@ -3,8 +3,8 @@ function getDate(dateTimeString) {
     const dateObject = new Date(dateTimeString);
 
     // Extract date components
-    const year = dateObject.getUTCFullYear();
-    const month = dateObject.getUTCMonth() + 1; // Month is zero-based, so we add 1
+    const year = dateObject.getFullYear();
+    const month = dateObject.getMonth() + 1; // Month is zero-based, so we add 1
     const day = dateObject.getDate();
 
     // Format month, day to have leading zeros if necessary
