@@ -26,8 +26,8 @@ function getTime(dateTimeString) {
     const dateObject = new Date(dateTimeString);
 
     // Extract time components
-    const hours = dateObject.getUTCHours();
-    const minutes = dateObject.getUTCMinutes();
+    const hours = dateObject.getHours();
+    const minutes = dateObject.getMinutes();
     
     // Format time to have leading zeros if necessary
     const formattedHours = hours < 10 ? '0' + hours : hours;
