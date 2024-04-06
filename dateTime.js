@@ -3,9 +3,12 @@ function getDate(dateTimeString) {
     const dateObject = new Date(dateTimeString);
 
     // Extract date components
-    const year = dateObject.getFullYear();
-    const month = dateObject.getMonth() + 1; // Month is zero-based, so we add 1
+    const year = dateObject.getUTCFullYear();
+    const month = dateObject.getUTCMonth() + 1; // Month is zero-based, so we add 1
     const day = dateObject.getDate();
+    const weekDay = dateObject.getDay();
+    const weekDays = ["Nedeľa", "Pondelok", "Utorok", "Streda", "Štvrtok", "Piatok"];
+    const dayOfTheWeek = weekDays[weekDay];
 
     // Format month, day to have leading zeros if necessary
     const formattedMonth = month < 10 ? '0' + month : month;
@@ -15,7 +18,7 @@ function getDate(dateTimeString) {
     //const formattedSeconds = seconds < 10 ? '0' + seconds : seconds;
 
     // Construct the date string in the desired format
-    const formattedDate = `${formattedDay}.${formattedMonth}.${year}`;
+    const formattedDate = `${dayOfTheWeek}, ${formattedDay}.${formattedMonth}.${year}`;
 
     // Return the formatted date string
     return formattedDate;
