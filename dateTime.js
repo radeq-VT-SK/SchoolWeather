@@ -7,7 +7,7 @@ function getDate(dateTimeString) {
     const month = dateObject.getUTCMonth() + 1; // Month is zero-based, so we add 1
     const day = dateObject.getDate();
     const weekDay = dateObject.getDay();
-    const weekDays = ["Nedeľa", "Pondelok", "Utorok", "Streda", "Štvrtok", "Piatok"];
+    const weekDays = ["nedeľa", "pondelok", "utorok", "streda", "štvrtok", "piatok"];
     const dayOfTheWeek = weekDays[weekDay];
 
     // Format month, day to have leading zeros if necessary
